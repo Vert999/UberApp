@@ -1,0 +1,198 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#D1D9FF"
+    android:textAlignment="center"
+    tools:context=".EstimateAct">
+
+    <TextView
+        android:id="@+id/textView4"
+        android:layout_width="244dp"
+        android:layout_height="68dp"
+        android:text="@string/title"
+        android:textAlignment="center"
+        android:textColor="#9500FF"
+        android:textSize="48sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="111dp"
+        android:layout_height="23dp"
+        android:text="Ride Estimate"
+        android:textAlignment="center"
+        android:textColor="#BB00FF"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toTopOf="@+id/radioGroup"
+        app:layout_constraintEnd_toEndOf="@+id/textView4"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="@+id/textView4"
+        app:layout_constraintTop_toBottomOf="@+id/textView4" />
+
+    <RadioGroup
+        android:id="@+id/radioGroup"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="391dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/textView4"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView4">
+
+        <TextView
+            android:id="@+id/textView6"
+            android:layout_width="159dp"
+            android:layout_height="32dp"
+            android:text="Preferred Ride"
+            android:textAlignment="center"
+            android:textSize="20sp" />
+
+        <RadioButton
+            android:id="@+id/btnMini"
+            android:layout_width="wrap_content"
+            android:layout_height="34dp"
+            android:text="Minivan" />
+
+        <RadioButton
+            android:id="@+id/btnSmart"
+            android:layout_width="83dp"
+            android:layout_height="33dp"
+            android:text="Smart Car" />
+
+        <RadioButton
+            android:id="@+id/btnSuv"
+            android:layout_width="85dp"
+            android:layout_height="33dp"
+            android:text="SUV"
+            tools:layout_editor_absoluteX="4dp"
+            tools:layout_editor_absoluteY="305dp" />
+
+        <RadioButton
+            android:id="@+id/btnSedan"
+            android:layout_width="83dp"
+            android:layout_height="30dp"
+            android:text="Sedan"
+            tools:layout_editor_absoluteX="-16dp"
+            tools:layout_editor_absoluteY="198dp" />
+
+    </RadioGroup>
+
+    <TextView
+        android:id="@+id/textView5"
+        android:layout_width="263dp"
+        android:layout_height="48dp"
+        android:text="How Far Do you have to travel?"
+        android:textAlignment="center"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toTopOf="@+id/InputLayout"
+        app:layout_constraintEnd_toEndOf="@+id/InputLayout"
+        app:layout_constraintHorizontal_bias="0.494"
+        app:layout_constraintStart_toStartOf="@+id/InputLayout"
+        app:layout_constraintTop_toBottomOf="@+id/radioGroup"
+        app:layout_constraintVertical_bias="0.65" />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/InputLayout"
+        android:layout_width="350dp"
+        android:layout_height="71dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.508"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/radioGroup"
+        app:layout_constraintVertical_bias="0.213">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/Mileage"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#D1D9FF"
+            android:hint="Mileage "
+            android:inputType="number|numberDecimal"
+            android:text="0" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <TextView
+        android:id="@+id/EstView"
+        android:layout_width="48dp"
+        android:layout_height="37dp"
+        android:text="Price"
+        android:textAlignment="viewEnd"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/textView5"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toEndOf="@+id/textView2"
+        app:layout_constraintTop_toBottomOf="@+id/InputLayout"
+        app:layout_constraintVertical_bias="0.147" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="35dp"
+        android:layout_height="33dp"
+        android:text="$"
+        android:textAlignment="center"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/radioGroup"
+        app:layout_constraintHorizontal_bias="0.348"
+        app:layout_constraintStart_toStartOf="@+id/textView5"
+        app:layout_constraintTop_toBottomOf="@+id/InputLayout"
+        app:layout_constraintVertical_bias="0.147" />
+
+    <Button
+        android:id="@+id/submitBtn"
+        android:layout_width="121dp"
+        android:layout_height="49dp"
+        android:backgroundTint="#5C367E"
+        android:text="Book Uber"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/textView5"
+        app:layout_constraintStart_toStartOf="@+id/textView5"
+        app:layout_constraintTop_toBottomOf="@+id/EstView" />
+
+    <TextView
+        android:id="@+id/DecView"
+        android:layout_width="60dp"
+        android:layout_height="32dp"
+        android:text=".Price"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="@+id/EstView"
+        app:layout_constraintEnd_toEndOf="@+id/InputLayout"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toEndOf="@+id/EstView"
+        app:layout_constraintTop_toTopOf="@+id/EstView"
+        app:layout_constraintVertical_bias="0.2" />
+
+    <Button
+        android:id="@+id/Estbutton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Estimate"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/EstView" />
+
+    <Button
+        android:id="@+id/backBtn"
+        android:layout_width="80dp"
+        android:layout_height="39dp"
+        android:backgroundTint="#474747"
+        android:text="Back"
+        app:layout_constraintBottom_toBottomOf="@+id/textView4"
+        app:layout_constraintEnd_toStartOf="@+id/textView4"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/textView4" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
